@@ -1,0 +1,23 @@
+{
+  "tasks": [
+    {
+      "service": "Gateway - Status",
+      "endpoint": "http://localhost:3000/status",
+      "apiKey": "68bde212-039e-4247-9934-654e358fed18",
+      "schedule": "*/5 * * * * *",
+      "active": true
+    },
+    {
+      "service": "Service 1 - posts",
+      "endpoint": "https://jsonplaceholder.typicode.com/posts/1",
+      "schedule": "*/5 * * * * *",
+      "active": false
+    },
+    {
+      "service": "Service 2 - comments",
+      "endpoint": "https://jsonplaceholder.typicode.com/comments/1",
+      "schedule": "*/10 * * * * *",
+      "active": false
+    }
+  ]
+}
