@@ -3,7 +3,7 @@
     {
       "service": "Gateway - Status",
       "endpoint": "http://localhost:3000/status",
-      "apiKey": "68bde212-039e-4247-9934-654e358fed18",
+      "apiKey": "xxx",
       "schedule": "*/5 * * * * *",
       "active": true
     },
