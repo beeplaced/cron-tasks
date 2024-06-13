@@ -21,10 +21,9 @@ const executeApiRequest = async (apiEndpoint, serviceName, apiKey) => {
                 'x-api-key': apiKey,
             },
         });
-
         console.log(`${serviceName} - API response:`, response.data);
     } catch (error) {
-        console.error(`${serviceName} - Error making API request:`, error.message);
+        console.error(`${serviceName} - Error during API request:`, error.message);
     }
 };
 
@@ -33,6 +32,7 @@ const startCronJobs = () => {
 
     if (config && config.tasks) {
         config.tasks.forEach((task) => {
+
             const { service, endpoint, schedule, active, apiKey } = task;
             if (!active) return
             cron.schedule(schedule, () => {

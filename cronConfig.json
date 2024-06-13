@@ -2,10 +2,38 @@
   "tasks": [
     {
       "service": "Gateway - Status",
-      "endpoint": "http://localhost:3000/status",
-      "apiKey": "xxx",
-      "schedule": "*/5 * * * * *",
+      "endpoint": "http://localhost:5679/status",
+      "apiKey": "68bde212-039e-4247-9934-654e358fed18",
+      "schedule": "*/1 * * * * *",
+      "active": false
+    },
+    {
+      "service": "Crontask",
+      "endpoint": "http://localhost:5679/cron",
+      "apiKey": "68bde212-039e-4247-9934-654e358fed18",
+      "schedule": "*/1 * * * * *",
       "active": true
+    },
+    {
+      "service": "10 seconds longtask triggered every second",
+      "endpoint": "http://localhost:3000/longtask",
+      "apiKey": "68bde212-039e-4247-9934-654e358fed18",
+      "schedule": "*/1 * * * * *",
+      "active": false
+    },
+    {
+      "service": "10 seconds longtask triggered every second",
+      "endpoint": "http://localhost:3000/longtask",
+      "apiKey": "68bde212-039e-4247-9934-654e358fed18",
+      "schedule": "*/2 * * * * *",
+      "active": false
+    },
+    {
+      "service": "10 seconds longtask triggered every second",
+      "endpoint": "http://localhost:3000/longtask",
+      "apiKey": "68bde212-039e-4247-9934-654e358fed18",
+      "schedule": "*/5 * * * * *",
+      "active": false
     },
     {
       "service": "Service 1 - posts",
