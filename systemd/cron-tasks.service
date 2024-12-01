@@ -1,0 +1,11 @@
+[Unit]
+Description=cron-tasks
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /opt/app/cron-tasks/systemd/start.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

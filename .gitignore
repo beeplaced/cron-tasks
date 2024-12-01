@@ -1,0 +1,22 @@
+node_modules/
+test.rest
+.eslintrc.json
+.eslintrc.js
+.stylelintrc.json
+
+# Ignore ESLint configuration files
+.eslintrc.js
+.eslintrc.json
+.eslintrc.yml
+.eslintrc.yaml
+eslintignore
+eslint-formatter
+eslint.config.mjs
+
+tsconfig.json
+.gitkeep
+package-lock.json
+nodemon.json
+images/
+reports/
+reportTemplates/
