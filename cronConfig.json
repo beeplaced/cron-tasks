@@ -8,10 +8,10 @@
       "active": false
     },
     {
-      "service": "Crontask",
-      "endpoint": "http://localhost:5679/cron",
+      "service": "Gateway - TaskQueue",
+      "endpoint": "http://localhost:5679/task-queue",
       "apiKey": "68bde212-039e-4247-9934-654e358fed18",
-      "schedule": "*/10 * * * * *",
+      "schedule": "*/50 * * * * *",
       "active": true
     }
   ]
