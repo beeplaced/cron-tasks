@@ -12,14 +12,14 @@
       "endpoint": "http://localhost:5679/task-queue",
       "apiKey": "68bde212-039e-4247-9934-654e358fed18",
       "schedule": "*/40 * * * * *",
-      "active": false
+      "active": true
     },
     {
       "service": "Gateway - TaskQueue, wait to test",
       "endpoint": "http://localhost:5679/task-queue-wait",
       "apiKey": "68bde212-039e-4247-9934-654e358fed18",
       "schedule": "*/40 * * * * *",
-      "active": true
+      "active": false
     }
   ]
 }
