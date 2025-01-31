@@ -11,7 +11,7 @@
       "service": "Gateway - TaskQueue",
       "endpoint": "http://localhost:5679/task-queue",
       "apiKey": "68bde212-039e-4247-9934-654e358fed18",
-      "schedule": "*/40 * * * * *",
+      "schedule": "*/30 * * * * *",
       "active": true
     },
     {
