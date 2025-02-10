@@ -16,9 +16,10 @@ const readConfigFile = () => {
 
 const executeApiRequest = async (apiEndpoint, serviceName, apiKey, toggle) => {
     try {
+        let selectedInstance
         let headers = {'x-api-key': apiKey };
         if (toggle !== undefined) {
-            const selectedInstance = toggle[currentIndex];
+            selectedInstance = toggle[currentIndex];
             headers['instance'] = selectedInstance;
             currentIndex = (currentIndex + 1) % toggle.length;
         }
