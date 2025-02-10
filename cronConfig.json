@@ -12,7 +12,7 @@
       "endpoint": "http://localhost:5679/task-queue",
       "apiKey": "68bde212-039e-4247-9934-654e358fed18",
       "schedule": "*/20 * * * * *",
-      "toggle": ["azure_EHSQ", "azure_EHSQ2"],
+      "toggle": ["azure_EHSQ", "azure_EHSQ2", "azure_EHSQ3"],
       "active": true
     },
     {

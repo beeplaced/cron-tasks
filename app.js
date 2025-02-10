@@ -23,7 +23,7 @@ const executeApiRequest = async (apiEndpoint, serviceName, apiKey, toggle) => {
             currentIndex = (currentIndex + 1) % toggle.length;
         }
         const response = await axios.get(apiEndpoint, { headers });
-        console.log(`${serviceName} - API response:`, response.data);
+        console.log(`${serviceName} | ${selectedInstance} | API response:`, response.data);
     } catch (error) {
         console.error(`${serviceName} - Error during API request:`, error.message);
     }
