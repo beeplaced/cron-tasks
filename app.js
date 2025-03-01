@@ -14,15 +14,16 @@ const readConfigFile = () => {
     }
 };
 
-const executeApiRequest = async (apiEndpoint, serviceName, apiKey, toggle) => {
+const executeApiRequest = async (apiEndpoint, serviceName, apiKey = undefined, toggle, header = undefined) => {
     try {
         let selectedInstance
-        let headers = {'x-api-key': apiKey };
+        let headers = header ? header : {'x-api-key': apiKey };
         if (toggle !== undefined) {
             selectedInstance = toggle[currentIndex];
             headers['instance'] = selectedInstance;
             currentIndex = (currentIndex + 1) % toggle.length;
         }
+        // console.log(headers)
         const response = await axios.get(apiEndpoint, { headers });
         console.log(`${serviceName} | ${selectedInstance} | API response:`, response.data);
     } catch (error) {
@@ -35,10 +36,10 @@ const startCronJobs = () => {
 
     if (config && config.tasks) {
         config.tasks.forEach((task) => {
-            const { service, endpoint, schedule, active, apiKey,toggle } = task;
+            const { service, endpoint, schedule, active, apiKey, toggle, header } = task;
             if (!active) return
             cron.schedule(schedule, () => {
-                executeApiRequest(endpoint, service, apiKey,toggle);
+                executeApiRequest(endpoint, service, apiKey, toggle, header);
             });
         });
     } else {

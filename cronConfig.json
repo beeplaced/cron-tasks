@@ -8,12 +8,19 @@
       "active": false
     },
     {
+      "service": "PromptDeno - TaskQueue",
+      "endpoint": "http://localhost:5681/analyzer",
+      "header": { "task": "opentasks" },
+      "schedule": "*/7 * * * * *",
+      "active": true
+    },
+    {
       "service": "Gateway - TaskQueue",
       "endpoint": "http://localhost:5679/task-queue",
       "apiKey": "68bde212-039e-4247-9934-654e358fed18",
       "schedule": "*/10 * * * * *",
       "toggle": ["azure_EHSQ", "azure_EHSQ2", "azure_EHSQ3"],
-      "active": true
+      "active": false
     },
     {
       "service": "Gateway - TaskQueue, wait to test",
